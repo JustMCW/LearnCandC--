@@ -1,0 +1,19 @@
+:: is scope resolution operator. 
+The identifier to the left of the :: symbol identifies the namespace that the name to the right of the :: symbol is contained within. 
+If no identifier to the left of the :: symbol is provided, the global namespace is assumed.
+
+std::cout 
+
+cout inside std namespace
+
+
+A using directive allows us to access the names in a namespace without using a namespace prefix. 
+using namespace std;
+
+cout
+
+when the compiler goes to determine what identifier cout is, it will match with std::cout, which, because of the using directive, is accessible as just cout.
+
+this bad because anything in standard namespace would conflict with our namings
+and man, as you add more to std, your confliction odds is higher
+This is why C++ made std a different namespace so why undo it?
